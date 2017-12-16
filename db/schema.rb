@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20171216050154) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "jokes", force: :cascade do |t|
     t.string "can_i_haz_id"
     t.datetime "created_at", null: false
@@ -21,11 +24,12 @@ ActiveRecord::Schema.define(version: 20171216050154) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "joke_id"
+    t.bigint "joke_id"
     t.integer "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["joke_id"], name: "index_votes_on_joke_id"
   end
 
+  add_foreign_key "votes", "jokes"
 end
