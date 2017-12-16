@@ -36,7 +36,7 @@ module DadsezApi
     # allow CORS from our React app
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:3001'
+        origins 'dadsez.herokuapp.com'
         resource '*',
           headers: :any,
           methods: %i(get post put patch delete options head)
