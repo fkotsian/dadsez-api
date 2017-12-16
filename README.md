@@ -1,24 +1,11 @@
-# README
+# Quick README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Contents
 
-Things you may want to cover:
+This app stores the Vote data for Jokes gleaned from the [CanIHazDadJoke API](https://icanhazdadjoke.com/api).
 
-* Ruby version
+## Models
 
-* System dependencies
+- Joke: stores the can_i_haz_id of the Joke; keeps a counter of votes
+- Vote: references a Joke, has a (currently static) +/- point value
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
