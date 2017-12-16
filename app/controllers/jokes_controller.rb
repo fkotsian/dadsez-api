@@ -12,13 +12,13 @@ class JokesController < ApplicationController
 
   def top_five
     render status: 200, json: {
-      joke_ids: Joke.top_five.reverse
+      jokes: Joke.top_five
     }
   end
 
   def bottom_five
     render status: 200, json: {
-      joke_ids: Joke.bottom_five
+      jokes: Joke.bottom_five
     }
   end
 end
